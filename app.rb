@@ -2,6 +2,7 @@ require 'sinatra'
 require 'shotgun'
 
 get '/cats' do
+  @name_sample = ["Oscar", "Viking", "Jeff"].sample
   erb(:index)
 end
 
