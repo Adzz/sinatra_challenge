@@ -1,8 +1,8 @@
 require 'sinatra'
 require 'shotgun'
 
-get '/cat' do
-  send_file 'index.html'
+get '/cats' do
+  erb(:index)
 end
 
 get '/' do
@@ -10,7 +10,7 @@ get '/' do
 end
 
 get '/notsosecret' do
-  "dogs eat dogs and pussys eat... 
+  "dogs eat dogs and pussys eat...
   cat food you disgusting person. Get your mind out of the gutter"
 end
 
