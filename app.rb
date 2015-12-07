@@ -10,9 +10,10 @@ get '/' do
 end
 
 get '/notsosecret' do
-  "dogs eat dogs and pussys eat, cat food you disgusting person. Get your mind out of the gutter"
+  "dogs eat dogs and pussys eat... 
+  cat food you disgusting person. Get your mind out of the gutter"
 end
 
-get "/wisdom" do
+get "/secret" do
   "It\'s a Dog eat dog world, man. "
 end
