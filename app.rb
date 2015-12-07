@@ -1,20 +1,22 @@
 require 'sinatra'
 require 'shotgun'
 
-get '/cats' do
-  @name_sample = ["Oscar", "Viking", "Jeff"].sample
+get '/random-cat' do
+  @name = ["Oscar", "Viking", "Jeff"].sample
+  erb(:index)
+end
+
+
+get '/cat-form' do
+  erb(:cat_form)
+end
+
+post '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
 
 get '/' do
   "There's always money in the bannana stand"
-end
-
-get '/notsosecret' do
-  "dogs eat dogs and pussys eat...
-  cat food you disgusting person. Get your mind out of the gutter"
-end
-
-get "/secret" do
-  "It\'s a Dog eat dog world, man. "
 end
